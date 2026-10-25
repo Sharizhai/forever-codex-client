@@ -13,5 +13,18 @@
   "home_trailer_title": "Bande-annonce officielle",
   "footer_about": "À propos et contacts",
   "footer_disclaimer": "Wow Forever Codex est un site communautaire, non affilié à Blizzard Entertainment, Inc. et non approuvé par celle-ci. World of Warcraft® et Blizzard Entertainment® sont des marques commerciales ou des marques déposées de Blizzard Entertainment, Inc. Toutes les autres marques appartiennent à leurs propriétaires respectifs.",
-  "footer_copyright": "© {year} Wow Forever Codex"
+  "footer_copyright": "© {year} Wow Forever Codex",
+
+  "about_title": "À propos et contact",
+  "about_subtitle": "Le codex communautaire de WoW Forever.",
+  "about_project_title": "Le projet",
+  "about_project_text": "Wow Forever Codex a pour ambition de réunir au même endroit tout ce dont les joueurs ont besoin pour leur aventure dans World of Warcraft Forever, sans avoir à naviguer entre plusieurs sites. Le site évolue au fil des nouveautés et le contenu peut changer pendant la bêta.",
+  "about_data_title": "Données",
+  "about_data_text": "Dès qu'elles seront disponibles, le site s'appuiera sur les API officielles de Blizzard pour afficher des informations fiables et à jour.",
+  "about_credits_title": "Crédits",
+  "about_credits_text": "World of Warcraft et ses éléments visuels appartiennent à Blizzard Entertainment. Les vidéos intégrées appartiennent à leurs auteurs et ne se chargent qu'à la lecture.",
+  "about_contact_title": "Contact",
+  "about_contact_text": "Une question, une suggestion ou une erreur à signaler ? Écrivez-nous :",
+  "about_disclaimer_title": "Site communautaire",
+  "about_disclaimer_text": "Wow Forever Codex est un projet communautaire indépendant, sans affiliation officielle avec Blizzard Entertainment."
 }

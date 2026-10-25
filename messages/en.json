@@ -13,5 +13,18 @@
   "home_trailer_title": "Official trailer",
   "footer_about": "About & contact",
   "footer_disclaimer": "Wow Forever Codex is a community website and is not affiliated with or endorsed by Blizzard Entertainment, Inc. World of Warcraft® and Blizzard Entertainment® are trademarks or registered trademarks of Blizzard Entertainment, Inc. All other trademarks belong to their respective owners.",
-  "footer_copyright": "© {year} Wow Forever Codex"
+  "footer_copyright": "© {year} Wow Forever Codex",
+
+  "about_title": "About & contact",
+  "about_subtitle": "The community codex for WoW Forever.",
+  "about_project_title": "The project",
+  "about_project_text": "Wow Forever Codex aims to bring together everything players need for their World of Warcraft Forever adventure in one place, without jumping between multiple sites. The site evolves with the game and content may change during the beta.",
+  "about_data_title": "Data",
+  "about_data_text": "Once available, the site will rely on Blizzard's official APIs to display reliable, up-to-date information.",
+  "about_credits_title": "Credits",
+  "about_credits_text": "World of Warcraft and its visual elements belong to Blizzard Entertainment. Embedded videos belong to their authors and only load when played.",
+  "about_contact_title": "Contact",
+  "about_contact_text": "A question, a suggestion or an error to report? Write to us:",
+  "about_disclaimer_title": "Community site",
+  "about_disclaimer_text": "Wow Forever Codex is an independent community project, not officially affiliated with Blizzard Entertainment."
 }

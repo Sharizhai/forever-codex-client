@@ -4,11 +4,13 @@
   import Router from "svelte-spa-router";
   import { onMount } from "svelte";
 
-  import HomePage from "$pages/HomePage.svelte";
   import AppLayout from "$components/layout/AppLayout.svelte";
+  import AboutPage from "$pages/AboutPage.svelte";
+  import HomePage from "$pages/HomePage.svelte";
 
   const routes = {
     "/": HomePage,
+    "/about": AboutPage,
   };
 
   onMount(() => {
