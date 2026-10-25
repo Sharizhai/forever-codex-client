@@ -4,8 +4,8 @@
   import Router from "svelte-spa-router";
   import { onMount } from "svelte";
 
-
   import HomePage from "$pages/HomePage.svelte";
+  import AppLayout from "$components/layout/AppLayout.svelte";
 
   const routes = {
     "/": HomePage,
@@ -20,4 +20,6 @@
 
 </script>
 
-<Router {routes} />
+<AppLayout>
+    <Router {routes} />
+</AppLayout>

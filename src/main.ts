@@ -1,6 +1,5 @@
-import { mount } from "svelte";
-
 import "$assets/styles/app.scss";
+import { mount } from "svelte";
 import App from './App.svelte';
 
 // @ts-ignore

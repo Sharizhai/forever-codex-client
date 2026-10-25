@@ -1,4 +1,17 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "example_message": "Bonjour {username}"
+  "example_message": "Bonjour {username}",
+
+  "nav_aria_label": "Navigation principale",
+  "nav_home": "Retour à l'accueil",
+  "nav_news": "Actualités",
+  "nav_races": "Races et raciaux",
+  "nav_talents": "Talents",
+  "nav_professions": "Professions",
+  "nav_legacy": "Héritage",
+  "home_tagline": "Tout ce dont vous avez besoin pour votre aventure, au même endroit.",
+  "home_trailer_title": "Bande-annonce officielle",
+  "footer_about": "À propos et contacts",
+  "footer_disclaimer": "Wow Forever Codex est un site communautaire, non affilié à Blizzard Entertainment, Inc. et non approuvé par celle-ci. World of Warcraft® et Blizzard Entertainment® sont des marques commerciales ou des marques déposées de Blizzard Entertainment, Inc. Toutes les autres marques appartiennent à leurs propriétaires respectifs.",
+  "footer_copyright": "© {year} Wow Forever Codex"
 }

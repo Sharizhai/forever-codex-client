@@ -20,6 +20,7 @@
       "$public/*": ["./public/*"],
       "$assets/*": ["./src/assets/*"],
       "$components/*": ["./src/components/*"],
+      "$config/*": ["./src/config/*"],
       "$data/*": ["./src/data/*"],
       "$lib/*": ["./src/lib/*"],
       "$pages/*": ["./src/pages/*"],
