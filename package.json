@@ -1,0 +1,32 @@
+{
+  "name": "forever-codex-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "check:i18n": "inlang check --project ./project.inlang",
+    "lint:i18n": "eslint --config ./eslint.paraglide.config.mjs .",
+    "compile-localization": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
+  },
+  "devDependencies": {
+    "@inlang/cli": "^3.4.0",
+    "@inlang/paraglide-js": "^2.29.1",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.19.2",
+    "@typescript-eslint/parser": "^8.71.2",
+    "eslint": "^9.39.2",
+    "sass-embedded": "^1.106.1",
+    "svelte": "^5.57.2",
+    "svelte-check": "^4.7.7",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4"
+  },
+  "dependencies": {
+    "svelte-spa-router": "^5.1.1"
+  }
+}

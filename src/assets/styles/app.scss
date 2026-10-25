@@ -1,0 +1,66 @@
+:root {
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+
+    --second-font-family: "Viga", serif;
+
+    --main-text-color: #F6CA88;
+    --main-border-color: #A16D37;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+
+    @media only screen and (min-width: 320px) {
+        font-size: 12px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        font-size: 13px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        font-size: 14px;
+    }
+
+    @media only screen and (min-width: 1800px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    color: var(--main-text-color);
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    color: var(--main-text-color);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
