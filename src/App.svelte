@@ -22,6 +22,8 @@
 
 </script>
 
-<AppLayout>
-    <Router {routes} />
-</AppLayout>
+{#key app.activeLocale}
+    <AppLayout>
+        <Router {routes} />
+    </AppLayout>
+{/key}

@@ -1,7 +1,7 @@
 import { setLocale, type Locale, locales } from "$paraglide/runtime";
 
 export function createAppSlice() {
-    let activeLocale: Locale = "fr";
+    let activeLocale = $state<Locale>("fr");
 
     function isValidLocale(value: string): value is Locale {
         return locales.includes(value as Locale);

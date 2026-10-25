@@ -1,10 +1,19 @@
 <script lang="ts">
+    import LanguageDropdown from "$components/generic/LanguageDropdown.svelte";
     import NavButton from "$components/layout/NavButton.svelte";
     import { isActivePath } from "$utils/navigationUtils";
+    import {getOfficialSiteUrl} from "$utils/localeUtils";
     import { link, router } from "svelte-spa-router";
     import * as messages from "$paraglide/messages";
     import { NAV_ITEMS } from "$config/navigation";
+    import { app } from "$stores/stores.svelte";
     import logo from "$assets/images/logo.png";
+
+    import urlIcon from "$assets/icons/url.svg?raw";
+
+    const officialSiteLabel = messages.nav_official_site();
+
+    const officialSiteUrl = $derived(getOfficialSiteUrl(app.activeLocale));
 </script>
 
 <nav class="navbar" aria-label={messages.nav_aria_label()}>
@@ -20,6 +29,14 @@
             </li>
         {/each}
     </ul>
+
+    <div class="navbar-actions">
+        <a href={officialSiteUrl} class="navbar-style-button icon-button" target="_blank" rel="noopener">
+            {officialSiteLabel}
+            <span class="navbar-url-icon">{@html urlIcon}</span>
+        </a>
+        <LanguageDropdown />
+    </div>
 </nav>
 
 <style lang="scss">
@@ -57,6 +74,21 @@
             padding: 0;
             list-style: none;
             overflow-x: auto;
+        }
+
+        &-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+
+        &-url-icon :global(svg){
+            width: 1rem;
+            height: 1rem;
+            color: var(--main-text-color);
+            margin-top: 0.2rem;
         }
     }
 </style>
