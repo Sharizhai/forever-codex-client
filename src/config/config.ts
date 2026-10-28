@@ -1,5 +1,7 @@
 import type {LanguageOption} from "$types/languageTypes";
 
+export const API_BASE_URL = "/api";
+
 export const CONTACT_EMAIL = "contact.wowcodex@gmail.com";
 export const TRAILER_VIDEO_ID = "bmHO1BNqlmg";
 export const ABOUT_PATH = "/about";

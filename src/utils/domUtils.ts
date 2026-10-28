@@ -11,3 +11,7 @@ export function clickOutside(node: HTMLElement, callback: () => void) {
         },
     };
 }
+
+export function scrollToTop() {
+    window.scrollTo({ top: 0 });
+}

@@ -7,10 +7,14 @@
   import AppLayout from "$components/layout/AppLayout.svelte";
   import AboutPage from "$pages/AboutPage.svelte";
   import HomePage from "$pages/HomePage.svelte";
+  import ArticleCreationPage from "$pages/ArticleCreationPage.svelte";
+
+  const pageUrl = import.meta.env.VITE_ARTICLE_CREATE_PATH;
 
   const routes = {
     "/": HomePage,
     "/about": AboutPage,
+      [pageUrl]: ArticleCreationPage
   };
 
   onMount(() => {

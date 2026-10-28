@@ -28,3 +28,24 @@
         gap: 0.5rem;
     }
 }
+
+.primary-button {
+    @extend .navbar-style-button;
+    align-self: flex-start;
+    border: 1px solid var(--main-border-color);
+    background-color: var(--dissolved-text-color);
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.red-button {
+    @extend .navbar-style-button;
+    color: var(--error-text-color);
+
+    &:hover {
+        background-color: var(--dissolved-error-color);
+    }
+}
