@@ -1,12 +1,14 @@
 <script lang="ts">
     import { buildArticlePayload, createEmptyArticleForm } from "$utils/articleUtils";
-    import Panel from "$components/generic/Panel.svelte";
-    import type { ArticleFormValues } from "$types/articleTypes";
-    import { resolveErrorMessage } from "$utils/errorUtils";
-    import * as messages from "$paraglide/messages";
-    import FormField from "$components/generic/form/FormField.svelte";
     import FormMessage from "$components/generic/form/FormMessage.svelte";
+    import FormField from "$components/generic/form/FormField.svelte";
+    import type { ArticleFormValues } from "$types/articleTypes";
     import {createArticle} from "$services/articleServices";
+    import { resolveErrorMessage } from "$utils/errorUtils";
+    import Panel from "$components/generic/Panel.svelte";
+    import {ARTICLE_CATEGORIES} from "$config/config";
+    import * as messages from "$paraglide/messages";
+    import MultiSelect from "$components/generic/form/MultiSelect.svelte";
 
     const titleLabel = messages.article_form_title();
     const categoryLabel = messages.article_form_category();
@@ -21,6 +23,9 @@
     const submittingLabel = messages.article_form_submitting();
     const successLabel = messages.article_form_success();
     const genericErrorLabel = messages.article_form_error();
+    const categoriesRequiredLabel = messages.article_form_categories_required();
+
+    const categoryOptions = ARTICLE_CATEGORIES.map((option) => ({ key: option.key, label: option.label() }));
 
     const errorTexts = {
         fallback: genericErrorLabel,
@@ -39,9 +44,15 @@
 
     async function onSubmit(event: SubmitEvent) {
         event.preventDefault();
-        isSubmitting = true;
         errorMessage = "";
         successMessage = "";
+
+        if (values.category.length === 0) {
+            errorMessage = categoriesRequiredLabel;
+            return;
+        }
+
+        isSubmitting = true;
 
         try {
             await createArticle(buildArticlePayload(values));
@@ -57,8 +68,8 @@
 
 <Panel title={titleLabel}>
     <form class="article-form" onsubmit={onSubmit}>
-        <FormField id="article-category" label={categoryLabel} bind:value={values.category}
-                   required disabled={isSubmitting} />
+        <MultiSelect label={categoryLabel} options={categoryOptions} bind:value={values.category}
+                     required disabled={isSubmitting} />
         <FormField id="article-title" label={articleTitleLabel} bind:value={values.title}
                    required disabled={isSubmitting} />
         <FormField id="article-summary" label={summaryLabel} type="textarea" rows={3}

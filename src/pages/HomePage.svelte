@@ -1,5 +1,7 @@
 <script lang="ts">
+    import LatestArticles from "$components/articles/LatestArticles.svelte";
     import VideoEmbed from "$components/generic/VideoEmbed.svelte";
+    import Separator from "$components/generic/Separator.svelte";
     import { TRAILER_VIDEO_ID } from "$config/config";
     import * as messages from "$paraglide/messages";
 
@@ -14,6 +16,10 @@
     </header>
 
     <VideoEmbed videoId={TRAILER_VIDEO_ID} title={trailerTitle} />
+
+    <Separator />
+
+    <LatestArticles />
 </section>
 
 <style lang="scss">

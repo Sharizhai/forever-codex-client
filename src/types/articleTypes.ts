@@ -1,5 +1,5 @@
 export interface ArticleCreationPayload {
-    category: string;
+    category: ArticleCategory[];
     title: string;
     summary: string;
     content: string;
@@ -16,7 +16,7 @@ export interface Article extends ArticleCreationPayload {
 }
 
 export interface ArticleFormValues {
-    category: string;
+    category: ArticleCategory[];
     title: string;
     summary: string;
     content: string;
@@ -25,3 +25,14 @@ export interface ArticleFormValues {
     sourceName: string;
     sourceUrl: string;
 }
+
+export type ArticleCategory =
+    | "NEWS" | "BLIZZARD" | "UPDATES" | "CLASSES_TALENTS" | "QUESTS_STORY" | "EXPLORATION"
+    | "DUNGEONS_RAIDS" | "PVP" | "LEGACY_SYSTEM" | "GUIDES" | "EVENTS" | "COMMUNITY" | "MEDIA";
+
+export interface ArticleCategoryOption {
+    key: ArticleCategory;
+    label: () => string;
+}
+
+export type ArticleLoadError = "notFound" | "failed";

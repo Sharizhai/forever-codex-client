@@ -1,20 +1,25 @@
 <script lang="ts">
   import { isMobile } from "$utils/deviceUtils";
   import { app } from "$stores/stores.svelte";
+  import {NEWS_PATH} from "$config/config";
   import Router from "svelte-spa-router";
   import { onMount } from "svelte";
 
+  import ArticleCreationPage from "$pages/ArticleCreationPage.svelte";
   import AppLayout from "$components/layout/AppLayout.svelte";
   import AboutPage from "$pages/AboutPage.svelte";
   import HomePage from "$pages/HomePage.svelte";
-  import ArticleCreationPage from "$pages/ArticleCreationPage.svelte";
+  import NewsPage from "$pages/NewsPage.svelte";
+  import ArticleDetailPage from "$pages/ArticleDetailPage.svelte";
 
   const pageUrl = import.meta.env.VITE_ARTICLE_CREATE_PATH;
 
   const routes = {
     "/": HomePage,
     "/about": AboutPage,
-      [pageUrl]: ArticleCreationPage
+      [pageUrl]: ArticleCreationPage,
+      [NEWS_PATH]: NewsPage,
+      [`${NEWS_PATH}/:id`]: ArticleDetailPage,
   };
 
   onMount(() => {
