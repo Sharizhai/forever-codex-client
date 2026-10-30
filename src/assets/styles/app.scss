@@ -16,6 +16,14 @@
     --error-text-color: #E57373;
     --dissolved-error-color: #222536;
     --success-text-color: #9CCC65;
+
+    --status-new-color: var(--success-text-color);
+    --status-modified-color: #64B5F6;
+    --status-unchanged-color: #B5A99A;
+    --status-removed-color: var(--error-text-color);
+
+    --alliance-color: #6FA8DC;
+    --horde-color: #D9726A;
 }
 
 *,

@@ -20,6 +20,7 @@ export const OFFICIAL_SITE_URLS: Record<string, string> = {
 };
 
 export const NEWS_PATH = "/news";
+export const RACES_PATH = "/races";
 export const LATEST_ARTICLES_COUNT = 3;
 
 export const ARTICLE_CATEGORIES: ArticleCategoryOption[] = [
