@@ -16,16 +16,16 @@
     const criteriaLabel = $derived(messages.legacy_challenge_criteria({ count: criteria.length }));
 </script>
 
-<article class="legacy-challenge">
-    <img class="legacy-challenge-icon" src={getLegacyIconUrl(challenge.icon)} alt=""
+<article class="legacy-challenge-card">
+    <img class="legacy-challenge-card-icon" src={getLegacyIconUrl(challenge.icon)} alt=""
          loading="lazy" onerror={hideBrokenImage} />
 
-    <div class="legacy-challenge-body">
-        <h3 class="legacy-challenge-title">{challenge.title()}</h3>
-        <p class="legacy-challenge-description">{challenge.description()}</p>
+    <div class="legacy-challenge-card-body">
+        <h3 class="legacy-challenge-card-title">{challenge.title()}</h3>
+        <p class="legacy-challenge-card-description">{challenge.description()}</p>
 
         {#if criteria.length > 0}
-            <details class="legacy-challenge-criteria">
+            <details class="legacy-challenge-card-criteria">
                 <summary>{criteriaLabel}</summary>
                 <ul>
                     {#each criteria as criterion}
@@ -36,28 +36,27 @@
         {/if}
 
         {#if countsTowardLabel}
-            <p class="legacy-challenge-note">{countsTowardLabel}</p>
+            <p class="legacy-challenge-card-note">{countsTowardLabel}</p>
         {/if}
 
         {#if !challenge.countsTowardTotal}
-            <p class="legacy-challenge-note">{outsideTotalLabel}</p>
+            <p class="legacy-challenge-card-note">{outsideTotalLabel}</p>
         {/if}
     </div>
 
     {#if challenge.points > 0}
-        <span class="legacy-challenge-points">{pointsLabel}</span>
+        <span class="legacy-challenge-card-points">{pointsLabel}</span>
     {/if}
 </article>
 
 <style lang="scss">
-    .legacy-challenge {
+    .legacy-challenge-card {
         flex: 1;
         display: flex;
         align-items: flex-start;
         gap: 0.75rem;
         min-width: 0;
         padding: 1rem;
-        background-color: rgba(0, 0, 0, 0.55);
         backdrop-filter: blur(8px);
         border: 1px solid var(--main-border-color);
         border-radius: 0.625rem;
