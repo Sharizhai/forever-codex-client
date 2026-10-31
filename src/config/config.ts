@@ -23,6 +23,12 @@ export const NEWS_PATH = "/news";
 export const RACES_PATH = "/races";
 export const LATEST_ARTICLES_COUNT = 3;
 
+export const LEGACY_PATH = "/legacy";
+export const LEGACY_POINT_BUDGET = 16;
+export const LEGACY_ICONS_PATH = "./src/assets/images";
+export const LEGACY_CATEGORY_IMAGES_PATH = "./src/assets/images";
+export const LEGACY_CRITERIA_SEPARATOR = " | ";
+
 export const ARTICLE_CATEGORIES: ArticleCategoryOption[] = [
     { key: "NEWS", label: () => messages.article_category_news() },
     { key: "BLIZZARD", label: () => messages.article_category_blizzard() },

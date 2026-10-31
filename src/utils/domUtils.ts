@@ -15,3 +15,7 @@ export function clickOutside(node: HTMLElement, callback: () => void) {
 export function scrollToTop() {
     window.scrollTo({ top: 0 });
 }
+
+export function hideBrokenImage(event: Event) {
+    (event.currentTarget as HTMLElement).style.visibility = "hidden";
+}

@@ -2,7 +2,7 @@
 
 :root {
     font-family: "Roboto", serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
 
     --second-font-family: "Viga", serif;
@@ -24,6 +24,12 @@
 
     --alliance-color: #6FA8DC;
     --horde-color: #D9726A;
+
+    --background-overlay-color: rgba(0, 0, 0, 0.55);
+
+    --forever-gold-color: #C6AE8C;
+    --forever-blue-color: #006687;
+    --forever-cream-color: #FFF2DD;
 }
 
 *,
