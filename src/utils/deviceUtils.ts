@@ -1,7 +1,12 @@
 export function isMobile() {
     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|Opera Mini|IEMobile/i;
-    // return regex.test(navigator.userAgent);
-    const isUserAgentMobile = regex.test(navigator.userAgent);
-    const isScreenSizeMobile = window.innerWidth <= 768;
-    return isUserAgentMobile || isScreenSizeMobile;
+    return regex.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && "ontouchend" in document);
+}
+
+export function isIPad() {
+    return /iPad/.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && "ontouchend" in document);
+}
+
+export function isSmartphone() {
+    return isMobile() && !isIPad();
 }
